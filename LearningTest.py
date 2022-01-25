@@ -1,0 +1,21 @@
+import numpy
+import matplotlib.pyplot as pyplot
+
+sample0 = numpy.random.normal(10.0, 2.0, 100000)
+print ("1st Mean " +str(numpy.mean(sample0)))
+print ("1st Median "+str(numpy.median(sample0)))
+print ("1st Standard Deviation "+str(numpy.std(sample0)))
+print ("1st 25th Percentile " +str(numpy.percentile(sample0,25)))
+print ("1st 75th Percentile " +str(numpy.percentile(sample0,75)))
+pyplot.hist(sample0,100)
+pyplot.show()
+sample1 = numpy.random.uniform(0.0, 10.0, 100000)
+print ("2nd Mean " +str(numpy.mean(sample1)))
+print ("2nd Median "+str(numpy.median(sample1)))
+print ("2nd Standard Deviation "+str(numpy.std(sample1)))
+print ("2nd 25th Percentile " +str(numpy.percentile(sample1,25)))
+print ("2nd 75th Percentile " +str(numpy.percentile(sample1,75)))
+pyplot.hist(sample1,100)
+pyplot.show()
+pyplot.scatter(sample0,sample1)
+pyplot.show()
